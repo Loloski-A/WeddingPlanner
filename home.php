@@ -13,16 +13,11 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="container">
+
   <?php @include 'header.php';?>
 
-
-
-
-
-
-
-
-
+  </div>
 
 
 
