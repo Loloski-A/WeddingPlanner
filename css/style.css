@@ -14,25 +14,31 @@
   outline:none ; border: none;
   text-decoration: none;
 }
+
 html{
   font-size: 62.5%;
   overflow: hidden;
 }
+
 html::-webkit-scrollbar{
   width: 1rem;
 }
+
 html::-webkit-scrollbar-track{
  background: transparent;
 }
+
 html::-webkit-scrollbar-thumb{
   background: var(--pink);
  }
+
  body{
   background: url(../images/background-img.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
  }
+ 
  .container{
   border-radius: .5rem;
   overflow: hidden;
@@ -42,9 +48,28 @@ html::-webkit-scrollbar-thumb{
   margin: 10rem auto;
   box-shadow: var(--box-shadow);
  }
+
+ .btn{
+  display: inline-block;
+  padding: 1rem 3rem;
+  border: var(--border);
+  background: var(--transparent-white);
+  color: var(--black);
+  border-radius: .5rem;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+ }
+
+.btn:hover{
+  background: var(--black);
+  color: var(--white);
+}
+
  section{
   padding: 2rem;
  }
+
  .header{
   position: relative;
   z-index: 1000;
@@ -53,18 +78,22 @@ html::-webkit-scrollbar-thumb{
   align-items: center;
   justify-content: space-between;
  }
+
  .header .logo{
   font-size: 2rem;
   color: var(--black);
  }
+
  .header .navbar a{
   font-size: 2rem;
   margin-left: 2rem;
   color: var(--black);
  }
+
  .header .navbar a:hover{
   color: var(--pink);
  }
+ 
 #menu-btn{
   font-size: 2.5rem;
   color: var(--black);
@@ -72,10 +101,56 @@ html::-webkit-scrollbar-thumb{
   display: none;
 }
 
+.home{
+  padding-bottom: 0;
+}
+.home .slide{
+  min-height: 60rem;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+.home .slide .content{
+  background: var(--transparent-white);
+  border-radius: .5rem;
+  backdrop-filter: blur(.5rem);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  padding: 2rem;
+  width: 50rem;
+}
+.home .slide .content h3{
+  font-size: 3rem;
+  color: var(--black);
+  text-transform: uppercase;
+}
+.home .slide .content p{
+  font-size: 1.5rem;
+  color: var(--black);
+  padding: 1rem 0;
+  line-height: 2;
+}
 
 
+@keyframes PopUp{
+  0%{
+    transform: scale(0);
+  }
+}
+.home .swiper-slide-active .content{
+  animation: PopUp .2s linear backwards .2s;
+}
 
+.swiper-pagination{
+  bottom:0 !important;
+}
 
+.swiper-pagination-bullet-active{
+ background: var(--pink);
+}
 
 
 
